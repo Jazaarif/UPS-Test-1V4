@@ -146,7 +146,7 @@ namespace Net_Test_1_V4___Jaza_Arif
                 user.status = cmbStatusAdd.SelectedValue.ToString();
                 if (hfID.Text == "0")
                 {
-                    user.id = Convert.ToInt32(txtIDAdd.Text.Trim());
+                    //user.id = Convert.ToInt32(txtIDAdd.Text.Trim());
 
                     User users = await userService.CreateUserAsync(user);
                     MessageBox.Show("Record saved!");
@@ -318,10 +318,6 @@ namespace Net_Test_1_V4___Jaza_Arif
             if (string.IsNullOrEmpty(txtEmailAdd.Text.Trim()))
             {
                 sb.Append("Email is missing! ");
-            }
-            if (string.IsNullOrEmpty(txtIDAdd.Text.Trim()))
-            {
-                sb.Append(" ID is missing! ");
             }
             if (string.IsNullOrEmpty(txtNameAdd.Text.Trim()))
             {
